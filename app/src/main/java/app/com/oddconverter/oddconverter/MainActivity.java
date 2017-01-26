@@ -18,20 +18,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final EditText team1 = (EditText) findViewById(R.id.team1);
-        final EditText team2 = (EditText) findViewById(R.id.team2);
+       // final EditText team2 = (EditText) findViewById(R.id.team2);
         Button bDone = (Button) findViewById(R.id.bDone);
 
         bDone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 fTeam1 = 1/Double.parseDouble(team1.getText().toString());
-                fTeam2 = 1/Double.parseDouble(team2.getText().toString());
+                //fTeam2 = 1/Double.parseDouble(team2.getText().toString());
 
                 fTeam1 = fTeam1 * 100;
-                fTeam2 = fTeam2 * 100;
+                //fTeam2 = fTeam2 * 100;
 
-                fTeam1 = Math.floor(fTeam1);
-                fTeam2 = Math.floor(fTeam2);
+                fTeam1 = Math.floor(fTeam1)-1;
+               // fTeam2 = Math.floor(fTeam2);
+                fTeam2 = 100-fTeam1;
 
                // Log.d("LUL",fTeam1 + "-" + fTeam2);
 
